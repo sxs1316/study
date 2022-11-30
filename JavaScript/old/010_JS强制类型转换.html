@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS强制类型转换</title>
+    <script>
+        /**
+         * 强制类型转换
+         *  - 将一个数据类型强制转换为其他数据类型
+         *  -
+         */
+
+        /**
+         * 将其他数据类型转换为 String
+         * 方法一：
+         *      - 调用被转换数据类型的toString()方法
+         *      - 该防范不会影响源变量
+         *      - 空值和未定义类型没有toString()方法
+         *
+         * 方式二：
+         *      - 调用String()函数，并将被转换的数据作为参数传递给函数。
+         */
+
+            //方法一
+        var a = 123;
+        console.log(typeof a);
+        console.log(a);
+        console.log(a.toString());
+
+        a = a.toString();
+        console.log(typeof a);
+        console.log(a);
+
+        var b = true;
+        console.log(b.toString());
+
+        //方法二
+        var aa = null;
+        var bb = undefined;
+
+        console.log(String(aa))
+        console.log(String(bb))
+
+        /**
+         * 将其他数据类型转换为 Number
+         * 方法一：
+         *      - 调用Number()函数
+         *
+         * 方式二：
+         *      - 调用String()函数，并将被转换的数据作为参数传递给函数。
+         */
+        var aaa = '123';
+        var bbb = 'bbb';
+        aaa = Number(aaa)
+
+        console.log(aaa)
+        console.log(typeof aaa)
+        console.log(bbb)
+        console.log(typeof bbb)
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
